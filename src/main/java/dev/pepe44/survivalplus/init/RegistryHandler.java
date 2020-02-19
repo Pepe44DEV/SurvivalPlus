@@ -6,6 +6,7 @@ import dev.pepe44.survivalplus.block.CarbonBlock;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -31,7 +32,12 @@ public class RegistryHandler {
         event.getRegistry().register(new CarbonBlock().setRegistryName(SurvivalPlusConstants.MODID, "replicator").setCreativeTab(SurvivalPlus.creativeTab));
     }
 
+    @SubscribeEvent
+    public static void addItems(RegistryEvent.Register<Item> event) {
+        event.getRegistry().register(new ItemBlock(ObjectHolders.CARBON_BLOCK).setRegistryName(SurvivalPlusConstants.MODID, "carbon_block"));
+        event.getRegistry().register(new ItemBlock(ObjectHolders.CARBON).setRegistryName(SurvivalPlusConstants.MODID, "Carbon"));
 
+    }
 
 
 
@@ -45,9 +51,13 @@ public class RegistryHandler {
 
     }
 
+
+
+
+
     @SubscribeEvent
     public static void addRecipes(RegistryEvent.Register<IRecipe> event) {
-        event.getRegistry().register(new ItemBlock(ObjectHolders.CARBON_BLOCK).setRegistryName(SurvivalPlusConstants.MODID, "carbon_block"));
+        event.getRegistry().register(new ItemBlock().setRegistryName(YouMatter.MODID, "carbon_block"));
 
 
     }

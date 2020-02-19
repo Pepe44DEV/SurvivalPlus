@@ -2,6 +2,7 @@ package dev.pepe44.survivalplus.init;
 
 import dev.pepe44.survivalplus.SurvivalPlusConstants;
 import dev.pepe44.survivalplus.block.CarbonBlock;
+import dev.pepe44.survivalplus.items.ItemCarbon;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
@@ -9,4 +10,5 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ObjectHolders {
 
     public static final CarbonBlock CARBON_BLOCK = null;
+    public static final ItemCarbon CARBON = null;
 }
