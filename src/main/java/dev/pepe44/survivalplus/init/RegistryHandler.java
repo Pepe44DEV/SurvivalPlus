@@ -1,9 +1,12 @@
 package dev.pepe44.survivalplus.init;
 
+import dev.pepe44.survivalplus.SurvivalPlus;
 import dev.pepe44.survivalplus.SurvivalPlusConstants;
+import dev.pepe44.survivalplus.block.CarbonBlock;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -25,7 +28,7 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void addBlocks(RegistryEvent.Register<Block> event) {
-        event.getRegistry().register(SurvivalPlusBlocks.carbonblock);
+        event.getRegistry().register(new CarbonBlock().setRegistryName(SurvivalPlusConstants.MODID, "replicator").setCreativeTab(SurvivalPlus.creativeTab));
     }
 
 
@@ -44,7 +47,7 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void addRecipes(RegistryEvent.Register<IRecipe> event) {
-        GameRegistry.addSmelting(Blocks.COAL_BLOCK, new ItemStack(SurvivalPlusItems.carbon, 1), 1f);
+        event.getRegistry().register(new ItemBlock(ObjectHolders.CARBON_BLOCK).setRegistryName(SurvivalPlusConstants.MODID, "carbon_block"));
 
 
     }
