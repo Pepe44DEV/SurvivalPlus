@@ -24,7 +24,7 @@ public class SurvivalPlusItems {
 
     public static void setName(Item item, String name ) {
         item.setRegistryName(new ResourceLocation(SurvivalPlusConstants.MODID, name));
-        item.setUnlocalizedName(name);
+        item.setTranslationKey(name);
     }
 
 }

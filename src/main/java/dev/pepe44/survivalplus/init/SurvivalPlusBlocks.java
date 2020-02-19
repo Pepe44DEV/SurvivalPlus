@@ -36,7 +36,7 @@ public class SurvivalPlusBlocks {
 
     public static void setName(Block block, String name ) {
         block.setRegistryName(new ResourceLocation(SurvivalPlusConstants.MODID, name));
-        block.setUnlocalizedName(name);
+        block.setTranslationKey(name);
 
     }
 
