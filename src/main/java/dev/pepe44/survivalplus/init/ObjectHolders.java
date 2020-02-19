@@ -9,6 +9,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 @GameRegistry.ObjectHolder(SurvivalPlusConstants.MODID)
 public class ObjectHolders {
 
-    public static final CarbonBlock CARBON_BLOCK = null;
-    public static final ItemCarbon CARBON = null;
+    public static final CarbonBlock carbonblock = null;
+    public static final ItemCarbon carbon = null;
 }
