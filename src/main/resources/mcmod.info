@@ -1,0 +1,11 @@
+[{
+  "modid": "survivalplus",
+  "name": "§6Survival Plus",
+  "description": "Lets you craft dirt into diamonds. This is a traditional mod that has existed for eons. It is ancient. The holy Notch created it. Jeb rainbowfied it. Dinnerbone made it upside down. Etc.",
+  "version": "1.0.0.0",
+  "mcversion": "1.10.2",
+  "url": "Pepe44.dev",
+  "updateJSON": "minecraftforge.net/versions.json",
+  "authorList": ["Pepe44DEV"],
+  "credits": "a tiny mod to expand minecraft"
+}]

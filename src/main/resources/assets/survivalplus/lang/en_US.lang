@@ -1,0 +1,8 @@
+#Creative Tab
+itemGroup.survtab=SurvivalPlus
+
+#Items
+item.carbon.name=Carbon
+
+#Blocks
+tile.carbonblock.name=Carbon Block
