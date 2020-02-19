@@ -6,6 +6,7 @@ import dev.pepe44.survivalplus.block.CarbonBlock;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -35,7 +36,7 @@ public class RegistryHandler {
     @SubscribeEvent
     public static void addItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().register(new ItemBlock(ObjectHolders.CARBON_BLOCK).setRegistryName(SurvivalPlusConstants.MODID, "carbon_block"));
-        event.getRegistry().register(new ItemBlock(ObjectHolders.CARBON).setRegistryName(SurvivalPlusConstants.MODID, "Carbon"));
+        event.getRegistry().register(new Item(ObjectHolders.CARBON).setRegistryName(SurvivalPlusConstants.MODID, "Carbon"));
 
     }
 
