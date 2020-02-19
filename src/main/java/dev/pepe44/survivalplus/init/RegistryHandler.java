@@ -22,6 +22,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import javax.annotation.Nonnull;
 import java.util.Objects;
 
+import static dev.pepe44.survivalplus.init.ObjectHolders.*;
+
 @Mod.EventBusSubscriber
 public class RegistryHandler {
 
@@ -35,8 +37,8 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void addItems(RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(new ItemBlock(ObjectHolders.CARBON_BLOCK).setRegistryName(SurvivalPlusConstants.MODID, "carbon_block"));
-        event.getRegistry().register(new Item(ObjectHolders.CARBON).setRegistryName(SurvivalPlusConstants.MODID, "Carbon"));
+        event.getRegistry().register(new ItemBlock(CARBON_BLOCK).setRegistryName(SurvivalPlusConstants.MODID, "carbon_block"));
+        event.getRegistry().register(ObjectHolders.CARBON.setRegistryName(SurvivalPlusConstants.MODID, "Carbon"));
 
     }
 
@@ -58,7 +60,7 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void addRecipes(RegistryEvent.Register<IRecipe> event) {
-        event.getRegistry().register(new ItemBlock().setRegistryName(YouMatter.MODID, "carbon_block"));
+        GameRegistry.addSmelting(Blocks.COAL_BLOCK, new ItemStack(CARBON, 1), 1.5f);
 
 
     }
