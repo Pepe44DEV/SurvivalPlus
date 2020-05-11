@@ -7,6 +7,7 @@ import net.minecraft.block.material.Material;
 public class CarbonBlock extends Block {
     public CarbonBlock() {
         super(Material.ROCK);
+        setTranslationKey("carbonblock");
         setCreativeTab(SurvivalPlus.creativeTab);
     }
 }

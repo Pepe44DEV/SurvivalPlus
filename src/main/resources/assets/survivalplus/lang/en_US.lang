@@ -3,6 +3,10 @@ itemGroup.survtab=SurvivalPlus
 
 #Items
 item.carbon.name=Carbon
+item.enderpouch.name=Enderpouch
+
 
 #Blocks
 tile.carbonblock.name=Carbon Block
+tile.fountain.name=Fountain
+

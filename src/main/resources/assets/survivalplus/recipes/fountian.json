@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "y y",
+    "zzz"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:stone",
+      "data": 1
+    },
+    "y":
+    {
+      "item": "minecraft:log",
+      "data": 0
+    },
+
+    "z":
+    {
+      "item": "minecraft:cobblestone"
+    }
+
+  },
+  "result":
+  {
+    "item": "survivalplus:fountain_block",
+    "count": 1
+
+  }
+}

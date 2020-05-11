@@ -3,11 +3,13 @@ package dev.pepe44.survivalplus.init;
 import dev.pepe44.survivalplus.SurvivalPlus;
 import dev.pepe44.survivalplus.SurvivalPlusConstants;
 import dev.pepe44.survivalplus.block.CarbonBlock;
+import dev.pepe44.survivalplus.block.WaterGeneratorBlock;
 import dev.pepe44.survivalplus.items.ItemCarbon;
+import dev.pepe44.survivalplus.items.ItemEnderPouch;
+import dev.pepe44.survivalplus.items.ItemMasterCrytsal;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -21,7 +23,6 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import javax.annotation.Nonnull;
-import java.util.Objects;
 
 import static dev.pepe44.survivalplus.init.ObjectHolders.*;
 
@@ -34,12 +35,17 @@ public class RegistryHandler {
     @SubscribeEvent
     public static void addBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().register(new CarbonBlock().setRegistryName(SurvivalPlusConstants.MODID, "carbonblock").setCreativeTab(SurvivalPlus.creativeTab));
+        event.getRegistry().register(new WaterGeneratorBlock().setRegistryName(SurvivalPlusConstants.MODID, "fountain").setCreativeTab(SurvivalPlus.creativeTab));
     }
 
     @SubscribeEvent
     public static void addItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().register(new ItemBlock(carbonblock).setRegistryName(SurvivalPlusConstants.MODID, "carbon_block"));
-        event.getRegistry().register(new ItemCarbon());
+        event.getRegistry().register(new ItemCarbon().setRegistryName(SurvivalPlusConstants.MODID, "carbon"));
+        event.getRegistry().register(new ItemBlock(fountain).setRegistryName(SurvivalPlusConstants.MODID, "fountain_block"));
+        event.getRegistry().register(new ItemEnderPouch().setRegistryName(SurvivalPlusConstants.MODID, "enderpouch"));
+        event.getRegistry().register(new ItemMasterCrytsal().setRegistryName(SurvivalPlusConstants.MODID, "mystercrystal"));
+
 
 
     }
